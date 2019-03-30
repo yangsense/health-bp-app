@@ -1,28 +1,16 @@
 <template>
   <div class="footer_guide">
-    <span class="guide_item" :class="{on: '/msite'===$route.path}" @click="goTo('/msite')">
+    <span class="guide_item" :class="{on: '/reportlist'===$route.path}" @click="goTo('/reportlist')">
       <span class="item_icon">
         <i class="iconfont icon-waimai"></i>
       </span>
-      <span>外卖</span>
+      <span>检查记录</span>
     </span>
-    <a href="javascript:;" class="guide_item" :class="{on: '/search'===$route.path}" @click="goTo('/search')">
-      <span class="item_icon">
-        <i class="iconfont icon-search"></i>
-      </span>
-      <span>搜索</span>
-    </a>
-    <a href="javascript:;" class="guide_item" :class="{on: '/order'===$route.path}" @click="goTo('/order')">
-      <span class="item_icon">
-        <i class="iconfont icon-dingdan"></i>
-      </span>
-      <span>订单</span>
-    </a>
     <a href="javascript:;" class="guide_item" :class="{on: '/profile'===$route.path}" @click="goTo('/profile')">
       <span class="item_icon">
         <i class="iconfont icon-geren"></i>
       </span>
-      <span>我的</span>
+      <span>我的账号</span>
     </a>
   </div>
 </template>
@@ -59,7 +47,7 @@
       margin 5px
       color #999999
       &.on
-        color #02a774
+        color #4F94CD
       span
         font-size 12px
         margin-top 2px

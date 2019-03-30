@@ -3,18 +3,28 @@
 </style>
 <template>
     <div>
-      <div class="title">检查报告列表</div>
-      <div class="report_container">
+      <div class="title">检查信息</div>
+      <div class="report_container" style="margin: 0 1rem">
         <ul class="report_list">
-          <li class = "report_li" v-for = "report in reportlist ">
-            <div class="shop_left">
-              <img class="shop_img" src="report.png">
+          <li class = "report_li" v-for = "report in reportlist" @click="$router.push('/reportdetail')">
+            <div class="report_left">
+              <img class="shop_img" src="./report.png">
             </div>
             <div class="shop_right">
-              <h4>{{report.studyItemdesc}}</h4>
+              <ul>
+                <li>
+                  <span>用户姓名 : {{report.patientName}}</span>
+                </li>
+                <li>
+                  <span >检查时间 : {{report.reportDatetime}}</span>
+                </li>
+                <li>
+                  <span>检查地点 : {{report.orgName}}</span>
+                </li>
+              </ul>
             </div>
-          </li>
 
+          </li>
         </ul>
 
       </div>
@@ -29,6 +39,7 @@
       name: "reportlist",
       data() {
         return {
+          datatime : "",
           reportlist: [],
           report: {
             patientName: "",
@@ -42,9 +53,12 @@
         //接受user信息并获取报告列表,
         getTableData() {
           var phone = localStorage.getItem("phone");
-          console.log("用户手机号为 ===", phone)
           getReportList(phone).then(res => {
-            console.log(res.data);
+            //遍历截取时间的时分秒
+            for (this.report of res.data) {
+              this.datatime = this.report.reportDatetime.substr(0, 10);
+              this.report.reportDatetime = this.datatime;
+            }
             this.reportlist = res.data;
           })
         },
