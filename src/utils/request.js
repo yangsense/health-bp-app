@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // 创建axios实例
 axios.create({
-  baseURL: 'http://127.0.0.1:8001', // api的base_url
+  baseURL: 'http://192.168.1.4:8001', // api的base_url
   timeout: 5000 // 请求超时时间
 })
 
@@ -99,12 +99,12 @@ axios.interceptors.response.use((response) => {
   }
 )
 
-let baseUrl = 'http://localhost:8001'
+let baseUrl = 'http://192.168.1.4:8001'
 export const postRequest = (url, params) => {
   console.log("post参数为:===" + params);
   return axios({
     method: 'post',
-    url: 'http://localhost:8001'+`${url}`,
+    url: 'http://192.168.1.4:8001'+`${url}`,
     data: {
       phone: params
     },
@@ -120,7 +120,7 @@ export const loginRequest = (url, {phone, password} ) => {
   console.log("post参数为:===" , phone, password);
   return axios({
     method: 'post',
-    url: 'http://localhost:8001'+`${url}`,
+    url: 'http://192.168.1.4:8001'+`${url}`,
     data: {
       phone : phone,
       password : password

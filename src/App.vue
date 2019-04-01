@@ -24,4 +24,5 @@
     height 100%
     background #f5f5f5
     color #606266
+/*  * { touch-action: pan-y; }*/
 </style>

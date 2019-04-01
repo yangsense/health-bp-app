@@ -1,0 +1,44 @@
+.returnlast{
+  float: left;
+  padding: 1.3em 0 0 1.2em;
+}
+.title{
+  font-size: 1.6em;
+  color: #fff;
+  padding-top: 0.8em;
+  padding-left: 35%;
+
+  height:45px;
+  background-color :#4F94CD;
+}
+.report_detail{
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  color: #606266;
+}
+.user_image{
+  float: left;
+  width: 80px;
+  height: 80px;
+  background-color: #4d555d;
+  margin-right: 1em;
+}
+ul li:first-child{
+  margin-bottom: 0.15em;
+}
+ul li:nth-child(2), li:nth-child(3){
+  line-height: 1.7em;
+}
+
+.showReportImage{
+  background-color: #4F94CD;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 1em;
+  width: 6em;
+  height: 2em;
+  float: right;
+  margin-top: 2em;
+}

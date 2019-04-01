@@ -21,9 +21,6 @@ import {
   reqShops,
   reqUserInfo,
   reqLogout,
-  reqShopRatings,
-  reqShopGoods,
-  reqShopInfo,
   reqSearchShop
 } from '../api'
 

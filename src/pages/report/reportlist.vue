@@ -6,7 +6,7 @@
       <div class="title">检查信息</div>
       <div class="report_container" style="margin: 0 1rem">
         <ul class="report_list">
-          <li class = "report_li" v-for = "report in reportlist" @click="$router.push('/reportdetail')">
+          <li class = "report_li" v-for = "report in reportlist" @click="$router.push({path : '/reportdetail', query:{studyAccnumber: report.studyAccnumber}})">
             <div class="report_left">
               <img class="shop_img" src="./report.png">
             </div>
@@ -42,6 +42,7 @@
           datatime : "",
           reportlist: [],
           report: {
+            studyAccnumber:"",
             patientName: "",
             reportDatetime: "",
             studyItemdesc: "",

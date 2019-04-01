@@ -7,7 +7,7 @@ import ajax from './ajax'
 import {postRequest, getRequest, loginRequest} from "../utils/request";
 
 // const BASE_URL = 'http://localhost:4000'
-const BASE_URL = 'http://localhost:8001'
+const BASE_URL = 'http://192.168.1.4:8001'
 
 // 1、用户名密码登陆
 export const reqPwdLogin = ({phone, password}) => ajax(BASE_URL+'/login', {phone, password}, 'POST')
