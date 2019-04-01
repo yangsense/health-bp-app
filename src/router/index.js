@@ -34,7 +34,10 @@ export default new VueRouter({
     },
     {
       path: '/reportlist',
-      component: reportlist
+      component: reportlist,
+      meta: {
+        showFooter: true
+      }
     },{
       path: '/reportdetail',
       component: reportdetail
